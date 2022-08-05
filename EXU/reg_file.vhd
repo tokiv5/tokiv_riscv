@@ -34,3 +34,5 @@ begin
     
     QA <= registers(conv_integer(unsigned(RA))) when readA = '1' else (others => '0');
     QB <= registers(conv_integer(unsigned(RB))) when readB = '1' else (others => '0');
+
+end data_flow;
