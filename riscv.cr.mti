@@ -1,4 +1,4 @@
-D:/graduate/summer/riscv/IFU/mem_init.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/mem_init.vhd
+D:/graduate/summer/riscv/EXU/test.vhd {0 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/EXU/test.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -6,9 +6,12 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_arith
 -- Loading package NUMERIC_STD
 -- Loading package riscv_pkg
--- Compiling package mem_init
+-- Compiling entity test
+-- Compiling architecture behave of test
+** Error: D:/graduate/summer/riscv/EXU/test.vhd(16): Type error resolving infix expression "&" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: D:/graduate/summer/riscv/EXU/test.vhd(17): VHDL Compiler exiting
 
-} {} {}} D:/graduate/summer/riscv/IFU/mini_decoder.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/mini_decoder.vhd
+} {11.0 13.0} {}} D:/graduate/summer/riscv/IFU/mini_decoder.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/mini_decoder.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -20,7 +23,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity mini_decoder
 -- Compiling architecture behave of mini_decoder
 
-} {} {}} D:/graduate/summer/riscv/IFU/if_id.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/if_id.vhd
+} {} {}} D:/graduate/summer/riscv/IFU/mem_init.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/mem_init.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -28,8 +31,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_arith
 -- Loading package NUMERIC_STD
 -- Loading package riscv_pkg
--- Compiling entity if_id
--- Compiling architecture behave of if_id
+-- Compiling package mem_init
 
 } {} {}} D:/graduate/summer/riscv/IFU/bpu.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/bpu.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -42,6 +44,17 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package riscv_pkg
 -- Compiling entity bpu
 -- Compiling architecture behave of bpu
+
+} {} {}} D:/graduate/summer/riscv/IFU/if_id.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/if_id.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity if_id
+-- Compiling architecture behave of if_id
 
 } {} {}} D:/graduate/summer/riscv/IFU/ifu.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/ifu.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -66,13 +79,16 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity ITCM
 -- Compiling architecture behave of ITCM
 
-} {} {}} D:/graduate/summer/riscv/riscv_pkg.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/riscv_pkg.vhd
+} {} {}} D:/graduate/summer/riscv/IFU/ifu_tb.vhd {1 {vcom -work work -2002 -explicit D:/graduate/summer/riscv/IFU/ifu_tb.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
 -- Loading package NUMERIC_STD
--- Compiling package riscv_pkg
+-- Loading package riscv_pkg
+-- Compiling entity testbench
+-- Compiling architecture ifu_tb of testbench
 
 } {} {}}
