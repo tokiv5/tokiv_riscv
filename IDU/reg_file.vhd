@@ -32,7 +32,7 @@ begin
         end if;
     end process;
     
-    QA <= registers(conv_integer(unsigned(RA))) when readA = '1' else (others => '0');
-    QB <= registers(conv_integer(unsigned(RB))) when readB = '1' else (others => '0');
+    QA <= WD when (RA = WAddr) and (write = 1) else registers(conv_integer(unsigned(RA))) when readA = '1' else (others => '0');
+    QB <= WD when (RB = WAddr) and (write = 1) else registers(conv_integer(unsigned(RB))) when readB = '1' else (others => '0');
 
 end data_flow;

@@ -12,7 +12,7 @@ package riscv_pkg is
     constant NOP: std_logic_vector(REG_WIDTH - 1 downto 0) := conv_std_logic_vector(19, REG_WIDTH); -- addi r0 r0 0
     subtype opcode_t is std_logic_vector(6 downto 0);
     type mem_t is array (MEM_DEPTH - 1 downto 0) of std_logic_vector(REG_WIDTH - 1 downto 0);
-
+    type ctype is (I, S, B, U, J, R);
     -- opcodes
     constant LUI : opcode_t := "0110111";
     constant AUI : opcode_t := "0010111"; -- auipc
