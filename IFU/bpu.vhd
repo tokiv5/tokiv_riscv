@@ -11,8 +11,8 @@ entity bpu is
     jalr_rs1: IN std_logic_vector(4 downto 0);
     jalr_rs1_val: IN std_logic_vector(REG_WIDTH - 1 downto 0);
     jalr_rd_en: OUT std_logic; -- enable signal for rf
-    is_rf_write: IN std_logic; -- whether there is a raw for jalr
-    rf_write_addr: IN std_logic_vector(RF_ADDR_WIDTH - 1 downto 0);
+    is_rf_write: IN std_logic; -- whether there is a raw for jalr, is last command I or R type
+    rf_write_addr: IN std_logic_vector(RF_ADDR_WIDTH - 1 downto 0); -- last command which in IDU
     bpu_wait: OUT std_logic -- wait rf return value, nop 1 cycle
   ) ;
 end bpu;

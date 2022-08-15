@@ -11,7 +11,8 @@ entity idu is
     rf_q1, rf_q2: IN std_logic_vector(REG_WIDTH - 1 downto 0);
     sign_ext: OUT std_logic;
     rd_out: OUT std_logic_vector(RF_ADDR_WIDTH - 1 downto 0);
-    alu_in1, alu_in2: OUT std_logic_vector(REG_WIDTH - 1 downto 0);
+    will_write: OUT std_logic;
+    alu_in1, alu_in2: OUT std_logic_vector(REG_WIDTH - 1 downto 0)
   ) ;
 end idu;
 
@@ -48,6 +49,8 @@ architecture arch of idu is
     signal imm: std_logic_vector(REG_WIDTH - 1 downto 0);
     signal command_type: ctype;
 begin
+    will_write <= '1' when command_type = R or command_type = I else '0';
+
     ID0: id
     port map(
         pc => pc,
