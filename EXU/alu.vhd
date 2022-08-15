@@ -25,7 +25,7 @@ begin
     shamt <= conv_integer(unsigned(in2(4 downto 0)));
     rd_out <= rd;
     wr_en <= alu_en;
-    process
+    process(in1, in2, op, alu_en, sign_ext)
     begin
         if alu_en = '0' then
             result <= (others => '0');
@@ -42,15 +42,15 @@ begin
                     result(REG_WIDTH - 1 downto shamt) <= in1(REG_WIDTH - 1 - shamt downto 0);
                 when "010" => -- slt
                     if in1 < in2 then
-                        result <= conv_std_logic_vector(REG_WIDTH, 1);
+                        result <= conv_std_logic_vector(1, REG_WIDTH);
                     else
-                        result <= conv_std_logic_vector(REG_WIDTH, 0);
+                        result <= conv_std_logic_vector(0, REG_WIDTH);
                     end if ;
                 when "011" => -- sltu
                     if unsigned(in1) < unsigned(in2) then
-                        result <= conv_std_logic_vector(REG_WIDTH, 1);
+                        result <= conv_std_logic_vector(1, REG_WIDTH);
                     else
-                        result <= conv_std_logic_vector(REG_WIDTH, 0);
+                        result <= conv_std_logic_vector(0, REG_WIDTH);
                     end if ;
                 when "100" => -- xor
                     result <= in1 xor in2;

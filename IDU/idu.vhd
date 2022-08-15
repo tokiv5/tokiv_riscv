@@ -24,7 +24,7 @@ architecture arch of idu is
           funct7: OUT std_logic_vector(6 downto 0);
           funct3: OUT std_logic_vector(2 downto 0);
           imm: OUT std_logic_vector(REG_WIDTH - 1 downto 0);
-          command_type: OUT ctype;
+          command_type: OUT ctype
         ) ;
       end component;
 
@@ -39,7 +39,7 @@ architecture arch of idu is
             sign_ext: OUT std_logic;
             rd_out: OUT std_logic_vector(RF_ADDR_WIDTH - 1 downto 0);
             alu_in1, alu_in2: OUT std_logic_vector(REG_WIDTH - 1 downto 0);
-            command_type: IN ctype;
+            command_type: IN ctype
         );
     end component;
 

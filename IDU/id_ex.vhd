@@ -16,7 +16,7 @@ entity id_ex is
     sign_ext: OUT std_logic;
     rd_out: OUT std_logic_vector(RF_ADDR_WIDTH - 1 downto 0);
     alu_in1, alu_in2: OUT std_logic_vector(REG_WIDTH - 1 downto 0);
-    command_type: IN ctype;
+    command_type: IN ctype
   ) ;
 end id_ex;
 

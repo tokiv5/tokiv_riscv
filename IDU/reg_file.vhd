@@ -18,7 +18,7 @@ architecture data_flow of reg_file is
     
 begin
     -- Write:
-    process(clk, reset)
+    process(clk, rst_n)
     begin
         if (rst_n = '0') then
             for i in registers'range loop
@@ -32,7 +32,7 @@ begin
         end if;
     end process;
     
-    QA <= WD when (RA = WAddr) and (write = 1) else registers(conv_integer(unsigned(RA))) when readA = '1' else (others => '0');
-    QB <= WD when (RB = WAddr) and (write = 1) else registers(conv_integer(unsigned(RB))) when readB = '1' else (others => '0');
+    QA <= WD when (RA = WAddr) and (write_en = '1') else registers(conv_integer(unsigned(RA))) when readA = '1' else (others => '0');
+    QB <= WD when (RB = WAddr) and (write_en = '1') else registers(conv_integer(unsigned(RB))) when readB = '1' else (others => '0');
 
 end data_flow;
